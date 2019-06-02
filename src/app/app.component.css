@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav-container {
+    flex: 1;
+}
+
+mat-sidenav {
+    width: 150px;
+    background-color: whitesmoke;
+}
+
+mat-sidenav-content {
+    background-color: white;
+}

@@ -1,0 +1,5 @@
+{
+  "port": 8081,
+  "devPort": 3001,
+  "dev": true
+}

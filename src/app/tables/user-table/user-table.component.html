@@ -1,0 +1,29 @@
+<mat-toolbar role="heading" color="warn">
+  <span class="table-header">User Table</span>
+</mat-toolbar>
+<div class="table">
+  <p-table [value]="users" #dt [columns]="cols" [autoLayout]=true [paginator]="true" [rows]="10" [loading]="loading">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let col of columns" [ngSwitch]="col.field">
+          <input pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">
+          {{user[col.field]}}
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      There are {{users?.length}} users
+    </ng-template>
+  </p-table>
+</div>
