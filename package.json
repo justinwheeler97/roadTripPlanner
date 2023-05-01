@@ -37,7 +37,7 @@
     "install": "^0.12.2",
     "joi": "^13.6.0",
     "joi-objectid": "^2.0.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "mixpanel": "^0.10.2",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.10",
